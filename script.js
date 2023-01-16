@@ -1,8 +1,7 @@
-const loginForm = document.querySelector("#login-form")
-const loginInput = loginForm.querySelector("input")
-const loginButton = document.querySelector("#login-form .loginbtn")
-console.log(loginInput)
-function loginBtnClick () {
+const loginInput = document.querySelector(".idInput")
+const loginButton = document.querySelector(".loginbtn")
+
+function loginBtnClick() {
     const username = loginInput.value
     if (username === "") {
         alert("Please write your name")
