@@ -1,14 +1,18 @@
 const loginInput = document.querySelector(".idInput")
-const loginButton = document.querySelector(".loginbtn")
+const loginForm = document.querySelector("#login-form")
+const greeting = document.querySelector("#greeting")
+const HIDDEN_CLASSNAME = "hidden"
 
-function loginBtnClick() {
+function loginBtnClick(event) {
+    event.preventDefault()
+    loginForm.classList.add("hidden")
     const username = loginInput.value
-    if (username === "") {
-        alert("Please write your name")
-    } else if (username.length > 15) {
-        alert("Your name is too long")
-    }
-        
+    greeting.innerText = `Hello ${username}`
+    greeting.classList.remove(HIDDEN_CLASSNAME)
 }
 
-loginButton.addEventListener("click", loginBtnClick)
+
+
+loginForm.addEventListener("submit", loginBtnClick)
+
+

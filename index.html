@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" placeholder="What is your name?" class = "idInput" />
-    <button class = "loginbtn">Log In</button>
+  <form id="login-form">
+    <input 
+      required maxlength="15"
+      type="text" placeholder="What is your name?" 
+      class = "idInput" />
+    <input type="submit" value="Log in">
   
-  
+  </form>
+  <h1 id="greeting" class="hidden"></h1>
   <script src="script.js"></script>
 </body>
 </html>
